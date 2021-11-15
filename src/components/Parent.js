@@ -1,25 +1,22 @@
 import React from 'react';
-import Form from './Form';
-import IframeSigninForm from './IFrameForm';
-// import IframeSigninForm from './IframeSigninForm';
+import { Container } from '@chakra-ui/react';
 
-function Parent() {
+function Parent({ validator, setValidator }) {
 	return (
-		<div>
-			<IframeSigninForm
-				content={
-					<form
-						action="https://app.usXX.list-manage.com/subscribe/post"
-						method="post"
-						formTarget="hiddenFrame"
-					/>
-				}
+		<Container pt="5rem">
+			<iframe
+			onClick={() => console.log("click")}
+				onMouseEnter={e => console.log(e.target)}
+				style={{
+					width: '100%',
+					height: 'calc(100vh - 15rem)',
+					border: '2px solid red'
+				}}
+				title="form"
+				src={`${window.location.href}form`}
 			/>
-
-			{/* <iframe title="form">
-                <Form />
-            </iframe> */}
-		</div>
+			Result: {JSON.stringify(validator)}
+		</Container>
 	);
 }
 
