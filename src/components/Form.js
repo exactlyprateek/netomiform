@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Select, Container, Heading, Input, Text, Button } from '@chakra-ui/react';
-import isEmail from 'validator/lib/isEmail';
+// import isEmail from 'validator/lib/isEmail';
 
 // import {  } from 'postcss';
 
@@ -37,7 +37,7 @@ export default function Form() {
 				setState(countriesData[countryId].states[0].name);
 			}
 		},
-		[ countryId ]
+		[countriesData, countryId]
 	);
 	function setCurrntCountry(params) {
 		// console.log(countriesData[params.target.value]);

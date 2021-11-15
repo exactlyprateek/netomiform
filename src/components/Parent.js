@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import { Container } from '@chakra-ui/react';
 import isEmail from 'validator/lib/isEmail';
 
 function Parent() {
 	const [ data, setData ] = React.useState({});
 	const [ result, setResult ] = useState({});
-	const VALIDATOR = [
-		{ field: 'state', validator: [ { required: true } ] },
-		{ field: 'country', validator: [ { required: true } ] },
-		{ field: 'contact', validator: [ { required: false } ] },
-		{ field: 'email', validator: [ { required: false } ] },
-		{ field: 'name', validator: [ { required: true } ] }
-	];
+	// const VALIDATOR = [
+	// 	{ field: 'state', validator: [ { required: true } ] },
+	// 	{ field: 'country', validator: [ { required: true } ] },
+	// 	{ field: 'contact', validator: [ { required: false } ] },
+	// 	{ field: 'email', validator: [ { required: false } ] },
+	// 	{ field: 'name', validator: [ { required: true } ] }
+	// ];
 
 	function validateForm() {
 		setResult({});
